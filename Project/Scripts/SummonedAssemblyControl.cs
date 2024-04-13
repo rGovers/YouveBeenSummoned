@@ -13,8 +13,6 @@ namespace Summoned
         Model      m_sphereModel;
         Model      m_boxModel;
 
-        GameObject m_player;
-
         public override void Init()
         {
             RenderPipeline.SetPipeline(new CellRenderPipeline());
@@ -39,11 +37,18 @@ namespace Summoned
             cubeMeshRenderer.Material = AssetLibrary.GetMaterial(MaterialDefTable.WhiteMaterial);
             cubeMeshRenderer.Model = m_boxModel;
 
-            m_player = GameObject.Instantiate();
-            MeshRenderer renderer = m_player.AddComponent<MeshRenderer>();
+            GameObject player = GameObject.Instantiate();
+            MeshRenderer renderer = player.AddComponent<MeshRenderer>();
             renderer.Material = AssetLibrary.GetMaterial(MaterialDefTable.WhiteMaterial);
             renderer.Model = m_sphereModel;
-            m_player.AddComponent(DefLibrary.GetDef<PlayerControllerDef>("PlayerController"));
+            player.AddComponent(DefLibrary.GetDef<PlayerControllerDef>("PlayerController"));
+
+            GameObject enemy = GameObject.Instantiate();
+            enemy.Transform.Translation = new Vector3(-10.0f, 0.0f, 0.0f);
+            MeshRenderer enemyRenderer = enemy.AddComponent<MeshRenderer>();
+            enemyRenderer.Material = AssetLibrary.GetMaterial(MaterialDefTable.RedMaterial);
+            enemyRenderer.Model = m_sphereModel;
+            enemy.AddComponent(DefLibrary.GetDef<EnemyControllerDef>("EnemyController"));
         }
 
         public override void Update()

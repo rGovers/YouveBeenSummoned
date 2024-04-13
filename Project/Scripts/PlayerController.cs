@@ -6,12 +6,24 @@ namespace Summoned
 {
     public class PlayerController : Scriptable
     {
+        public static PlayerController Instance = null;
+
         public PlayerControllerDef PlayerControllerDef
         {
             get
             {
                 return Def as PlayerControllerDef;
             }
+        }
+
+        public void Serve()
+        {
+            Logger.Message("Served");
+        }
+
+        public override void Init()
+        {
+            Instance = this;
         }
 
         public override void Update()

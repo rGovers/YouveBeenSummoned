@@ -6,5 +6,6 @@ namespace Summoned
     public static class MaterialDefTable
     {
         public static MaterialDef WhiteMaterial;
+        public static MaterialDef RedMaterial;
     }
 }
