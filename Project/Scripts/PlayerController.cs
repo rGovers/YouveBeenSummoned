@@ -8,6 +8,8 @@ namespace Summoned
     {
         public static PlayerController Instance = null;
 
+        bool m_lock;
+
         public PlayerControllerDef PlayerControllerDef
         {
             get
@@ -18,16 +20,32 @@ namespace Summoned
 
         public void Serve()
         {
-            Logger.Message("Served");
+            UIController.Serve();
+
+            m_lock = true;
         }
 
         public override void Init()
         {
             Instance = this;
+
+            Reset();
+        }
+
+        public void Reset()
+        {
+            m_lock = false;
+
+            Transform.Translation = Vector3.Zero;
         }
 
         public override void Update()
         {
+            if (m_lock)
+            {
+                return;
+            }
+
             PlayerControllerDef def = PlayerControllerDef;
 
             float mov = 0.0f;
