@@ -9,6 +9,7 @@ namespace Summoned
         public static PlayerController Instance = null;
 
         bool m_lock;
+        bool m_interactLock;
 
         public PlayerControllerDef PlayerControllerDef
         {
@@ -18,11 +19,16 @@ namespace Summoned
             }
         }
 
-        public void Serve()
+        public bool InteractLock
         {
-            UIController.Serve();
-
-            m_lock = true;
+            get
+            {
+                return m_interactLock;
+            }
+            set
+            {
+                m_interactLock = value;
+            }
         }
 
         public override void Init()
@@ -35,13 +41,22 @@ namespace Summoned
         public void Reset()
         {
             m_lock = false;
+            m_interactLock = false;
 
             Transform.Translation = Vector3.Zero;
         }
 
+        public void Serve()
+        {
+            Minigames.Clear();
+            UIController.Serve();
+
+            m_lock = true;
+        }
+
         public override void Update()
         {
-            if (m_lock)
+            if (m_lock || m_interactLock)
             {
                 return;
             }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene>
+  <Objects>
+    <GameObject>
+      <Translation>
+        <X>-10</X>
+      </Translation>
+      <DefName>EnemyGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <DefName>MarketClickMinigameGameObject</DefName>
+    </GameObject>
+  </Objects>
+  <Defs>
+    <Summoned.Definitions.ClickMinigameControllerDef Name="MarketClickMinigame" />
+    <MeshRendererDef Name="MarketMinigameMeshRenderer">
+      <ModelPath>Models/Minigame_Temp.glb</ModelPath>
+      <MaterialDef>WhiteMaterial</MaterialDef>
+    </MeshRendererDef>
+    <GameObjectDef Name="MarketClickMinigameGameObject">
+      <Translation>
+        <X>2.588481</X>
+      </Translation>
+      <Components>
+        <lv>MarketClickMinigame</lv>
+        <lv>MarketMinigameMeshRenderer</lv>
+      </Components>
+    </GameObjectDef>
+  </Defs>
+</Scene>

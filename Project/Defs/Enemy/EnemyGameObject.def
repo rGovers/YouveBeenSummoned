@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GameObjectDef Name="EnemyGameObject">
+  <Components>
+    <lv>EnemyMeshRenderer</lv>
+    <lv>EnemyController</lv>
+  </Components>
+</GameObjectDef>
