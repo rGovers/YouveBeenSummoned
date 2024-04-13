@@ -1,0 +1,40 @@
+#version 450
+
+layout(location = 0) in vec2 vUV;
+
+layout(binding = 0) uniform sampler2D colorSampler;
+layout(binding = 1) uniform sampler2D depthSampler;
+
+layout(location = 0) out vec4 outColor;
+
+const float step = 0.001;
+const float threshold = 0.1;
+
+void main()
+{
+    vec4 color = texture(colorSampler, vUV);
+    float depth = texture(depthSampler, vUV).x;
+
+    float d = texture(depthSampler, vUV).x;
+
+    float dL = texture(depthSampler, vUV + vec2(-step, 0)).x;
+    float dR = texture(depthSampler, vUV + vec2(step, 0)).x;
+    float dU = texture(depthSampler, vUV + vec2(0, step)).x;
+    float dD = texture(depthSampler, vUV + vec2(0, -step)).x;
+
+    float dLU = texture(depthSampler, vUV + vec2(-step, step)).x;
+    float dLD = texture(depthSampler, vUV + vec2(-step, -step)).x;
+    float dRU = texture(depthSampler, vUV + vec2(step, step)).x;
+    float dRD = texture(depthSampler, vUV + vec2(step, -step)).x;
+
+    float x = dLU + 2.0 * dL + dLD - dRU - 2.0 * dR - dRD;
+    float y = -dLU - 2.0 * dU - dRU + dLD + 2.0 * dD + dRD;
+
+    float v = sqrt(x * x + y * y);
+
+    float z = max(0.0, 1.0 - v / threshold);
+    float iZ = 1.0 - z;
+
+    // outColor = vec4(z.xxx, 1.0);
+    outColor = vec4((color.xyz * z) + (iZ.xxx * 5), 1.0);
+}
