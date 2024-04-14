@@ -1,0 +1,32 @@
+#version 450
+
+layout(location = 0) in vec4 position;
+layout(location = 1) in vec3 normal;
+layout(location = 2) in vec4 color;
+layout(location = 3) in vec2 texCoord;
+layout(location = 4) in vec4 boneWeights;
+layout(location = 5) in ivec4 boneIndices;
+
+layout(location = 0) out vec3 fragNormal;
+layout(location = 1) out vec2 fragTexCoord;
+
+#!structure(CameraBuffer, 1, 1, camBuffer)
+#!pushbuffer(PModelBuffer, modelBuffer)
+#!structure(SSBoneBuffer, 2, 2, boneBuffer)
+
+void main()
+{
+    mat4 boneTransformA = boneBuffer.objects[boneIndices.x].BoneMatrix;
+    mat4 boneTransformB = boneBuffer.objects[boneIndices.y].BoneMatrix;
+    mat4 boneTransformC = boneBuffer.objects[boneIndices.z].BoneMatrix;
+    mat4 boneTransformD = boneBuffer.objects[boneIndices.w].BoneMatrix;
+
+    mat4 boneTransform = boneTransformA * boneWeights.x + boneTransformB * boneWeights.y + boneTransformC * boneWeights.z + boneTransformD * boneWeights.w;
+
+    mat4 modelMat = modelBuffer.Model;
+
+    gl_Position = camBuffer.ViewProj * modelMat * boneTransform * position;
+
+    fragNormal = mat3(modelMat) * mat3(boneTransform) * normal;
+    fragTexCoord = texCoord;
+}

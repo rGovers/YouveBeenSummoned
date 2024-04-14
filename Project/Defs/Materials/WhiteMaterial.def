@@ -28,16 +28,19 @@
       <Offset>44</Offset>
     </lv>
   </VertexAttributes>
-  <CullingMode>Front</CullingMode>
   <ShaderBuffers>
     <lv>
       <Slot>10</Slot>
       <BufferType>CameraBuffer</BufferType>
-      <ShaderSlot>Vertex</ShaderSlot>
+      <Count>0</Count>
       <Set>0</Set>
+      <ShaderSlot>Vertex</ShaderSlot>
     </lv>
     <lv>
+      <Slot>0</Slot>
       <BufferType>PModelBuffer</BufferType>
+      <Count>0</Count>
+      <Set>0</Set>
       <ShaderSlot>Vertex</ShaderSlot>
     </lv>
   </ShaderBuffers>

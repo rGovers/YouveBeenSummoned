@@ -22,13 +22,13 @@ namespace Summoned
             m_sphereModel = PrimitiveGenerator.CreateIcoSphere(2);
 
             GameObject lightObject = GameObject.Instantiate();
-            lightObject.Transform.Rotation = Quaternion.FromAxisAngle(Vector3.Normalized(new Vector3(1.0f, 0.0f, 0.3f)), 1.2f);
+            lightObject.Transform.Rotation = Quaternion.FromAxisAngle(Vector3.Normalized(new Vector3(1.0f, 0.0f, 0.3f)), 1.3f);
             AmbientLight ambLight = lightObject.AddComponent<AmbientLight>();
             ambLight.Color = Color.White;
-            ambLight.Intensity = 0.1f;
+            ambLight.Intensity = 0.5f;
             DirectionalLight dirLight = lightObject.AddComponent<DirectionalLight>();
             dirLight.Color = Color.White;
-            dirLight.Intensity = 1.5f;
+            dirLight.Intensity = 1.0f;
 
             GameObject player = GameObject.Instantiate();
             MeshRenderer renderer = player.AddComponent<MeshRenderer>();

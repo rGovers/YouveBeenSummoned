@@ -47,10 +47,10 @@ namespace Summoned
                 return;
             }
 
-            // if (s_minigames.Count <= 0)
-            // {
-            //     Logger.Message("You Win!");
-            // }
+            if (s_minigames.Count <= 0)
+            {
+                Logger.Message("You Win!");
+            }
 
             if (Input.IsKeyReleased(KeyCode.E))
             {

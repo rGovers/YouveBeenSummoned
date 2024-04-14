@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MaterialDef Name="PolygonMaterial_Road_01" Parent="PolygonMaterial_Base">
+  <TextureInputs>
+    <lv>
+      <Slot>0</Slot>
+      <Path>Textures/Polygon/PolygonTown_Road_01.png</Path>
+      <AddressMode>Repeat</AddressMode>
+      <FilterMode>Linear</FilterMode>
+    </lv>
+  </TextureInputs>
+</MaterialDef>
