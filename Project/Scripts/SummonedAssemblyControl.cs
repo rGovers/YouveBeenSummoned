@@ -12,8 +12,6 @@ namespace Summoned
     {
         Model m_sphereModel;
 
-        Scene m_scene;
-
         public override void Init()
         {
             RenderPipeline.SetPipeline(new CellRenderPipeline());
@@ -38,8 +36,7 @@ namespace Summoned
             renderer.Model = m_sphereModel;
             player.AddComponent(DefLibrary.GetDef<PlayerControllerDef>("PlayerController"));
 
-            m_scene = Scene.LoadScene("Market.iscene");
-            m_scene.GenerateScene(Matrix4.Identity);
+            SceneManager.LoadScene("Market.iscene");
         }
 
         public override void Update()
@@ -55,7 +52,7 @@ namespace Summoned
         {
             m_sphereModel.Dispose();
 
-            m_scene.Dispose();
+            SceneManager.Destroy();
         }
     }
 }

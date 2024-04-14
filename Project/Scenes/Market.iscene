@@ -8,6 +8,9 @@
       <DefName>EnemyGameObject</DefName>
     </GameObject>
     <GameObject>
+      <Translation>
+        <X>9.34137</X>
+      </Translation>
       <DefName>MarketClickMinigameGameObject</DefName>
     </GameObject>
   </Objects>
@@ -18,9 +21,6 @@
       <MaterialDef>WhiteMaterial</MaterialDef>
     </MeshRendererDef>
     <GameObjectDef Name="MarketClickMinigameGameObject">
-      <Translation>
-        <X>2.588481</X>
-      </Translation>
       <Components>
         <lv>MarketClickMinigame</lv>
         <lv>MarketMinigameMeshRenderer</lv>

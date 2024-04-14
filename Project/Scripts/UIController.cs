@@ -34,6 +34,19 @@ namespace Summoned
         {
             a_element.Color = Color.Red;
         }
+        static void OnRestart(Canvas a_canvas, UIElement a_element)
+        {
+            // Dodgy hack because I still have not updated my UI to use deletion queues
+            // Need to do work on UI down the line
+            ThreadPool.PushJob(() =>
+            {
+                SceneManager.RestartScene();
+
+                Reset();
+
+                PlayerController.Instance.InteractLock = false;
+            });
+        }
         static void OnQuit(Canvas a_canvas, UIElement a_element)
         {
             // Technically leaking everything but...... 

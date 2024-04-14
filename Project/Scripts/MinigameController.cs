@@ -28,7 +28,7 @@ namespace Summoned
 
         public override void Init()
         {
-            m_canvas = new Canvas(new Vector2(1280, 720));
+            m_canvas = null;
 
             Minigames.AddMinigame(this);
         }
@@ -37,6 +37,8 @@ namespace Summoned
 
         public void Interact()
         {
+            m_canvas = new Canvas(new Vector2(1280, 720));
+
             InitGame();
 
             PlayerController.Instance.InteractLock = true;
@@ -49,12 +51,15 @@ namespace Summoned
 
         public void Dispose()
         {
-            PlayerController.Instance.InteractLock = false;
-
             Minigames.RemoveMinigame(this);
-            Minigames.ClearLock();
+            
+            if (m_canvas != null)
+            {
+                m_canvas.Dispose();
 
-            m_canvas.Dispose();
+                Minigames.ClearLock();
+                PlayerController.Instance.InteractLock = false;
+            }
         }
     }
 }
