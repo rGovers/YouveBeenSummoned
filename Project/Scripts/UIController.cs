@@ -9,8 +9,16 @@ namespace Summoned
         static GameObject s_servedObject = null;
         static Canvas s_servedCanvas = null;
 
+        static GameObject s_victoryObject = null;
+        static Canvas s_victoryCanvas = null;
+
         public static void Serve()
         {
+            if (s_victoryObject != null)
+            {
+                return;
+            }
+
             if (s_servedObject == null)
             {
                 s_servedCanvas = Canvas.FromFile("UI/Served.ui");
@@ -19,6 +27,24 @@ namespace Summoned
                 s_servedObject = GameObject.Instantiate();
                 CanvasRenderer renderer = s_servedObject.AddComponent<CanvasRenderer>();
                 renderer.Canvas = s_servedCanvas;
+            }
+        }
+
+        public static void Victory()
+        {
+            if (s_servedObject != null)
+            {
+                return;
+            }
+
+            if (s_victoryObject == null)
+            {
+                s_victoryCanvas = Canvas.FromFile("UI/Victory.ui");
+                s_victoryCanvas.CapturesInput = true;
+
+                s_victoryObject = GameObject.Instantiate();
+                CanvasRenderer renderer = s_victoryObject.AddComponent<CanvasRenderer>();
+                renderer.Canvas = s_victoryCanvas;
             }
         }
 
@@ -64,6 +90,15 @@ namespace Summoned
 
             s_servedObject = null;
             s_servedCanvas = null;
+
+            if (s_victoryObject != null)
+            {
+                s_victoryObject.Dispose();
+                s_victoryCanvas.Dispose();
+            }
+
+            s_victoryObject = null;
+            s_victoryCanvas = null;
         }
     }
 }

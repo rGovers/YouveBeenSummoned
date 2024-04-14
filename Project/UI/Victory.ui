@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Canvas xRes="1280" yRes="720">
+    <Text xPos="10" yPos="30" width="500" height="100" text="You escaped the Lawyers!" fontSize="70" font="Fonts/Whisper-Regular.ttf"/>
+
+    <Text xPos="30" yPos="100" width="100" height="40" text="Quit" fontSize="30" font="Fonts/Roboto-Bold.ttf"
+        onNormal="Summoned.UIController:OnNormal"
+        onHover="Summoned.UIController:OnHover"
+        onPressed="Summoned.UIController:OnPressed" 
+        onReleased="Summoned.UIController:OnQuit"/>
+</Canvas>

@@ -10,10 +10,19 @@ namespace Summoned
 {
     public class YouveBeenSummonedAssemblyControl : AssemblyControl
     {
+        bool m_fullscreen;
         Model m_sphereModel;
 
         public override void Init()
         {
+            m_fullscreen = true;
+            if (!Application.IsHeadless)
+            {
+                Monitor[] monitors = Application.GetMonitors();
+
+                Application.SetFullscreen(monitors[0], true, monitors[0].Width, monitors[0].Height);
+            }
+
             RenderPipeline.SetPipeline(new CellRenderPipeline());
 
             CameraController.Init();
@@ -41,6 +50,25 @@ namespace Summoned
 
         public override void Update()
         {
+            if (Input.AltModifier)
+            {
+                if (!Application.IsHeadless && Input.IsKeyReleased(KeyCode.Enter))
+                {
+                    Monitor[] monitors = Application.GetMonitors();
+
+                    m_fullscreen = !m_fullscreen;
+
+                    if (m_fullscreen)
+                    {
+                        Application.SetFullscreen(monitors[0], true, monitors[0].Width, monitors[0].Height);
+                    }
+                    else
+                    {
+                        Application.SetFullscreen(monitors[0], false, 1280, 720);
+                    }
+                }
+            }
+
             Minigames.Update();
         }
         public override void FixedUpdate()

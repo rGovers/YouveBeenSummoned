@@ -206,6 +206,14 @@
       </Translation>
       <DefName>PolygonBidShop01GameObject</DefName>
     </GameObject>
+    <GameObject>
+      <Translation>
+        <X>11.84654</X>
+        <Y>-2.639988</Y>
+        <Z>-2.72441</Z>
+      </Translation>
+      <DefName>PolygonSign01GameObject</DefName>
+    </GameObject>
   </Objects>
   <Defs>
     <Summoned.Definitions.ClickMinigameControllerDef Name="MarketClickMinigame" />
@@ -315,6 +323,20 @@
       </Scale>
       <Components>
         <lv>PolygonBidShop01MeshRenderer</lv>
+      </Components>
+    </GameObjectDef>
+    <MeshRendererDef Name="PolygonSign01MeshRenderer">
+      <ModelPath>Models/Polygon/SM_Bld_Shop_Sign_01.obj</ModelPath>
+      <MaterialDef>PolygonMaterial_01_A</MaterialDef>
+    </MeshRendererDef>
+    <GameObjectDef Name="PolygonSign01GameObject">
+      <Scale>
+        <X>0.01</X>
+        <Y>0.01</Y>
+        <Z>0.01</Z>
+      </Scale>
+      <Components>
+        <lv>PolygonSign01MeshRenderer</lv>
       </Components>
     </GameObjectDef>
   </Defs>

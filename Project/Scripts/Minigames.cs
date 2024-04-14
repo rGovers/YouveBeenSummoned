@@ -49,7 +49,7 @@ namespace Summoned
 
             if (s_minigames.Count <= 0)
             {
-                Logger.Message("You Win!");
+                UIController.Victory();
             }
 
             if (Input.IsKeyReleased(KeyCode.E))
