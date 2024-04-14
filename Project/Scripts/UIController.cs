@@ -70,7 +70,7 @@ namespace Summoned
 
                 Reset();
 
-                PlayerController.Instance.InteractLock = false;
+                PlayerController.Instance.Reset();
             });
         }
         static void OnQuit(Canvas a_canvas, UIElement a_element)

@@ -3,7 +3,7 @@
   <Objects>
     <GameObject>
       <Translation>
-        <X>-10</X>
+        <X>-3.362924</X>
       </Translation>
       <DefName>EnemyGameObject</DefName>
     </GameObject>
