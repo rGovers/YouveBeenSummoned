@@ -7,15 +7,16 @@ layout(binding = 1) uniform sampler2D colorSamplerB;
 
 layout(location = 0) out vec4 outColor;
 
-layout(set=1, binding=2) uniform UserInput
-{
-    float Blend;
-} userInput;
+// layout(set=1, binding=2) uniform UserInput
+// {
+//     float Blend;
+// } userInput;
 
 void main()
 {
     vec4 colorA = texture(colorSamplerA, vUV);
     vec4 colorB = texture(colorSamplerB, vUV);
 
-    outColor = vec4(mix(colorA.xyz, colorB.xyz, userInput.Blend), 1.0);
+    // outColor = vec4(mix(colorA.xyz, colorB.xyz, userInput.Blend), 1.0);
+    outColor = vec4(mix(colorA.xyz, colorB.xyz, 1.0), 1.0);
 }

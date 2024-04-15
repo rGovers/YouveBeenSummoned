@@ -239,15 +239,15 @@ namespace Summoned
                         ShaderSlot = ShaderSlot.Pixel,
                         Set = 0
                     },
-                    new ShaderBufferInput()
-                    {
-                        Slot = 2,
-                        BufferType = ShaderBufferType.UserUBO,
-                        ShaderSlot = ShaderSlot.Pixel,
-                        Set = 1
-                    }
+                    // new ShaderBufferInput()
+                    // {
+                    //     Slot = 2,
+                    //     BufferType = ShaderBufferType.UserUBO,
+                    //     ShaderSlot = ShaderSlot.Pixel,
+                    //     Set = 1
+                    // }
                 },
-                UBOBuffer = m_blend
+                // UBOBuffer = m_blend
             };
             
             m_blendMaterial = Material.CreateMaterial(blendBuilder);
@@ -346,7 +346,7 @@ namespace Summoned
         {
             if (m_blend > 0)
             {
-                m_blendMaterial.SetUserUniform(m_blend);
+                // m_blendMaterial.SetUserUniform(m_blend);
 
                 RenderCommand.BindRenderTexture(m_finalRenderTexture);
                 RenderCommand.BindMaterial(m_outlineMaterial);

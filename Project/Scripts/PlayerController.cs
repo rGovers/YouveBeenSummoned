@@ -8,8 +8,10 @@ namespace Summoned
     {
         public static PlayerController Instance = null;
 
-        bool m_lock;
-        bool m_interactLock;
+        bool  m_lock;
+        bool  m_interactLock;
+
+        float m_targetDirection;
 
         public PlayerControllerDef PlayerControllerDef
         {
@@ -34,6 +36,8 @@ namespace Summoned
         public override void Init()
         {
             Instance = this;
+
+            m_targetDirection = 0.0f;
 
             Reset();
         }
@@ -74,11 +78,14 @@ namespace Summoned
                 mov += 1.0f;
             }
 
+            m_targetDirection = Mathf.Lerp(m_targetDirection, Mathf.HalfPI * mov, Time.DeltaTime * 5);
+
             float xPos = Transform.Translation.X + mov * def.MoveSpeed * Time.DeltaTime;
+            Transform.Rotation = Quaternion.FromAxisAngle(Vector3.UnitX, Mathf.Sin(Time.TimePassed * 7.5f) * mov * 0.1f) * Quaternion.FromAxisAngle(Vector3.UnitX, -Mathf.HalfPI) * Quaternion.FromAxisAngle(Vector3.UnitZ, m_targetDirection);
 
             CameraController.Position = xPos;
 
-            Transform.Translation = new Vector3(xPos, 0.0f, 0.0f);
-        }
+            Transform.Translation = new Vector3(Mathf.Min(xPos, 55.0f), 1.0f - Mathf.Abs(Mathf.Sin(Time.TimePassed * 7.5f) * mov * 0.1f), 0.0f);
+        }   
     }
 }

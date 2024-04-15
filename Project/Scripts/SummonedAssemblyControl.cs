@@ -4,6 +4,7 @@ using IcarianEngine.Maths;
 using IcarianEngine.Mod;
 using IcarianEngine.Rendering;
 using IcarianEngine.Rendering.Lighting;
+using IcarianEngine.Rendering.UI;
 using Summoned.Definitions;
 
 namespace Summoned
@@ -12,10 +13,10 @@ namespace Summoned
     {
         public static YouveBeenSummonedAssemblyControl Instance;
 
+        Canvas             m_mainCanvas;
         CellRenderPipeline m_pipeline;
 
         bool               m_fullscreen;
-        Model              m_sphereModel;
 
         bool               m_blend = false;
 
@@ -43,6 +44,12 @@ namespace Summoned
                 Application.SetFullscreen(monitors[0], true, monitors[0].Width, monitors[0].Height);
             }
 
+            m_mainCanvas = Canvas.FromFile("UI/Main.ui");
+
+            GameObject obj = GameObject.Instantiate();
+            CanvasRenderer canvasRenderer = obj.AddComponent<CanvasRenderer>();
+            canvasRenderer.Canvas = m_mainCanvas;
+
             m_pipeline = new CellRenderPipeline();
             RenderPipeline.SetPipeline(m_pipeline);
 
@@ -50,8 +57,6 @@ namespace Summoned
             SoundMixers.Init();
             CameraController.Init();
             Minigames.Init();
-
-            m_sphereModel = PrimitiveGenerator.CreateIcoSphere(2);
 
             GameObject lightObject = GameObject.Instantiate();
             lightObject.Transform.Rotation = Quaternion.FromAxisAngle(Vector3.Normalized(new Vector3(1.0f, 0.0f, 0.3f)), 1.3f);
@@ -63,9 +68,10 @@ namespace Summoned
             dirLight.Intensity = 1.0f;
 
             GameObject player = GameObject.Instantiate();
+            player.Transform.Scale = Vector3.One * 0.01f;
             MeshRenderer renderer = player.AddComponent<MeshRenderer>();
-            renderer.Material = AssetLibrary.GetMaterial(MaterialDefTable.WhiteMaterial);
-            renderer.Model = m_sphereModel;
+            renderer.Material = AssetLibrary.GetMaterial(MaterialDefTable.PolygonCharacterMaterial_01_A);
+            renderer.Model = AssetLibrary.LoadModel("Models/Polygon/Character/Player.glb");
             player.AddComponent(DefLibrary.GetDef<PlayerControllerDef>("PlayerController"));
 
             SceneManager.LoadScene("Market.iscene");
@@ -112,11 +118,11 @@ namespace Summoned
 
         public override void Close()
         {
-            m_sphereModel.Dispose();
-
             AudioPlayer.Destroy();
             SceneManager.Destroy();
             SoundMixers.Destroy();
+
+            m_mainCanvas.Dispose();
         }
     }
 }

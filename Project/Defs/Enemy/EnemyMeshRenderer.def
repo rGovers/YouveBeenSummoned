@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MeshRendererDef Name="EnemyMeshRenderer">
-  <ModelPath>Models/Polygon/Character/Lawyer.glb</ModelPath>
-  <MaterialDef>PolygonCharacterMaterial_03_A</MaterialDef>
+  <ModelPath>Models/Polygon/Character/Character_Lawyer_final.glb</ModelPath>
+  <MaterialDef>PolygonCharacterMaterial_04_A</MaterialDef>
 </MeshRendererDef>

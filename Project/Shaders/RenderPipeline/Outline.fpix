@@ -15,6 +15,12 @@ void main()
     vec4 color = texture(colorSampler, vUV);
     float depth = texture(depthSampler, vUV).x;
 
+    // Dodgy hack as I do not want to look at black anymore
+    if (depth > 0.9999)
+    {
+        color = vec4(51 / 255.0, 146 / 255.0, 214 / 255.0, 1.0);
+    }
+
     float d = texture(depthSampler, vUV).x;
 
     float dL = texture(depthSampler, vUV + vec2(-step, 0)).x;

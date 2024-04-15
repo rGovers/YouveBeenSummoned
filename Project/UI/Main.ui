@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Canvas xRes="1280" yRes="720">
+    <Text xPos="1000" yPos="10" width="500" height="40" text="A and D to move." fontSize="24" font="Fonts/Roboto-Regular.ttf">
+        <Text yPos="40" width="500" height="40" text="E to Interact with the shop door minigames." fontSize="24" font="Fonts/Roboto-Regular.ttf"/>
+        <Text yPos="80" width="500" height="40" text="Mash that minigame button!" fontSize="24" font="Fonts/Roboto-Regular.ttf"/>
+        <Text yPos="120" width="500" height="40" text="Run from the Lawyers!" fontSize="24" font="Fonts/Roboto-Regular.ttf"/>
+    </Text>
+</Canvas>

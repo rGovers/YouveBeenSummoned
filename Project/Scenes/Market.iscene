@@ -4,17 +4,24 @@
     <GameObject>
       <Translation>
         <X>-3.362924</X>
-        <Y>0.986847</Y>
+        <Y>-0.1573943</Y>
       </Translation>
       <Rotation>
-        <Y>-0.7100012</Y>
-        <W>0.7042004</W>
+        <X>0.4999831</X>
+        <Y>-0.4999831</Y>
+        <Z>-0.5041018</Z>
+        <W>0.4958982</W>
       </Rotation>
+      <Scale>
+        <X>0.999998</X>
+        <Y>0.9999972</Y>
+        <Z>0.9999991</Z>
+      </Scale>
       <DefName>EnemyGameObject</DefName>
     </GameObject>
     <GameObject>
       <Translation>
-        <X>10</X>
+        <X>11.50204</X>
       </Translation>
       <DefName>MarketClickMinigameGameObject</DefName>
     </GameObject>
@@ -160,6 +167,14 @@
     <GameObject>
       <Translation>
         <X>65</X>
+        <Y>1</Y>
+        <Z>3</Z>
+      </Translation>
+      <DefName>PolygonSidewalkStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>70</X>
         <Y>1</Y>
         <Z>3</Z>
       </Translation>
@@ -697,6 +712,78 @@
     </GameObject>
     <GameObject>
       <Translation>
+        <X>70</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>72.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>75</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>77.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>80</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>82.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>85</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>87.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>90</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
         <X>11.53248</X>
         <Y>1</Y>
         <Z>-7.493935</Z>
@@ -837,6 +924,22 @@
     </GameObject>
     <GameObject>
       <Translation>
+        <X>70</X>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>75</X>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
         <X>15</X>
         <Y>1</Y>
         <Z>-7</Z>
@@ -925,6 +1028,38 @@
     </GameObject>
     <GameObject>
       <Translation>
+        <X>70</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>75</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>80</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>85</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
         <X>15</X>
         <Y>1</Y>
         <Z>-12</Z>
@@ -1006,6 +1141,46 @@
     <GameObject>
       <Translation>
         <X>65</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>70</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>75</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>80</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>85</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>90</X>
         <Y>1</Y>
         <Z>-12</Z>
       </Translation>
@@ -1021,7 +1196,9 @@
     </GameObject>
   </Objects>
   <Defs>
-    <Summoned.Definitions.ClickMinigameControllerDef Name="MarketClickMinigame" />
+    <Summoned.Definitions.ClickMinigameControllerDef Name="MarketClickMinigame">
+      <InteractRadius>3</InteractRadius>
+    </Summoned.Definitions.ClickMinigameControllerDef>
     <MeshRendererDef Name="MarketMinigameMeshRenderer">
       <ModelPath>Models/Minigame_Temp.glb</ModelPath>
       <MaterialDef>WhiteMaterial</MaterialDef>
@@ -1029,7 +1206,6 @@
     <GameObjectDef Name="MarketClickMinigameGameObject">
       <Components>
         <lv>MarketClickMinigame</lv>
-        <lv>MarketMinigameMeshRenderer</lv>
       </Components>
     </GameObjectDef>
     <MeshRendererDef Name="PolygonRoadParkingMeshRenderer">
