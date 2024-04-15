@@ -15,7 +15,7 @@ namespace Summoned
             };
             MusicMixer = new AudioMixer()
             {
-                Gain = 0.5f
+                Gain = 0.3f
             };
         }
 

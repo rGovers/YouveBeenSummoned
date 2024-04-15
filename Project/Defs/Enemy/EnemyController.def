@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Summoned.Definitions.EnemyControllerDef Name="EnemyController">
+  <MoveSpeed>4.5</MoveSpeed>
   <ServeRadius>1</ServeRadius>
 </Summoned.Definitions.EnemyControllerDef>

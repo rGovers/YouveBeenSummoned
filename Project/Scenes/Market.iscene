@@ -23,19 +23,19 @@
       <Translation>
         <X>11.50204</X>
       </Translation>
-      <DefName>MarketClickMinigameGameObject</DefName>
+      <DefName>MarketClickMinigameGameObjectA</DefName>
     </GameObject>
     <GameObject>
       <Translation>
         <X>31.90498</X>
       </Translation>
-      <DefName>MarketClickMinigameGameObject</DefName>
+      <DefName>MarketClickMinigameGameObjectB</DefName>
     </GameObject>
     <GameObject>
       <Translation>
         <X>51.22094</X>
       </Translation>
-      <DefName>MarketClickMinigameGameObject</DefName>
+      <DefName>MarketClickMinigameGameObjectC</DefName>
     </GameObject>
     <GameObject>
       <Translation>
@@ -1196,16 +1196,31 @@
     </GameObject>
   </Objects>
   <Defs>
-    <Summoned.Definitions.ClickMinigameControllerDef Name="MarketClickMinigame">
+    <Summoned.Definitions.ClickMinigameControllerDef Name="MarketClickMinigameA">
       <InteractRadius>3</InteractRadius>
     </Summoned.Definitions.ClickMinigameControllerDef>
-    <MeshRendererDef Name="MarketMinigameMeshRenderer">
-      <ModelPath>Models/Minigame_Temp.glb</ModelPath>
-      <MaterialDef>WhiteMaterial</MaterialDef>
-    </MeshRendererDef>
-    <GameObjectDef Name="MarketClickMinigameGameObject">
+    <Summoned.Definitions.ClickMinigameControllerDef Name="MarketClickMinigameB">
+      <RequiredClickEnergy>20</RequiredClickEnergy>
+      <InteractRadius>3</InteractRadius>
+    </Summoned.Definitions.ClickMinigameControllerDef>
+    <Summoned.Definitions.ClickMinigameControllerDef Name="MarketClickMinigameC">
+      <ClickEnergy>0.9</ClickEnergy>
+      <RequiredClickEnergy>15</RequiredClickEnergy>
+      <InteractRadius>3</InteractRadius>
+    </Summoned.Definitions.ClickMinigameControllerDef>
+    <GameObjectDef Name="MarketClickMinigameGameObjectA">
       <Components>
-        <lv>MarketClickMinigame</lv>
+        <lv>MarketClickMinigameA</lv>
+      </Components>
+    </GameObjectDef>
+    <GameObjectDef Name="MarketClickMinigameGameObjectB">
+      <Components>
+        <lv>MarketClickMinigameB</lv>
+      </Components>
+    </GameObjectDef>
+    <GameObjectDef Name="MarketClickMinigameGameObjectC">
+      <Components>
+        <lv>MarketClickMinigameC</lv>
       </Components>
     </GameObjectDef>
     <MeshRendererDef Name="PolygonRoadParkingMeshRenderer">

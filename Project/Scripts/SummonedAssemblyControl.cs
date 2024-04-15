@@ -53,8 +53,8 @@ namespace Summoned
             m_pipeline = new CellRenderPipeline();
             RenderPipeline.SetPipeline(m_pipeline);
 
-            AudioPlayer.Init();
             SoundMixers.Init();
+            AudioPlayer.Init();
             CameraController.Init();
             Minigames.Init();
 

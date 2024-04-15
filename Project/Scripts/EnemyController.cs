@@ -22,7 +22,7 @@ namespace Summoned
         {
             m_lock = false;
 
-            m_waitTime = 2.0f;
+            m_waitTime = 3.0f;
         }
 
         public override void FixedUpdate()
@@ -34,7 +34,7 @@ namespace Summoned
 
             if (m_waitTime > 0.0f)
             {
-                m_waitTime -= Time.DeltaTime;
+                m_waitTime -= Time.FixedDeltaTime;
 
                 return;
             }
