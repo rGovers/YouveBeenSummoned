@@ -55,7 +55,8 @@ namespace Summoned
             
             if (m_canvas != null)
             {
-                m_canvas.Dispose();
+                m_canvas.CapturesInput = false;
+                // m_canvas.Dispose();
 
                 Minigames.ClearLock();
                 PlayerController.Instance.InteractLock = false;

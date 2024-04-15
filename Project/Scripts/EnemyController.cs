@@ -32,7 +32,8 @@ namespace Summoned
 
             float xPos = Transform.Translation.X + def.MoveSpeed * Time.FixedDeltaTime;
 
-            Transform.Translation = new Vector3(xPos, 0.0f, 0.0f);
+            Transform.Translation = new Vector3(xPos, 1.0f - Mathf.Abs(Mathf.Sin(Time.FixedTimePassed * def.BobSpeed)) * 0.5f, 0.0f);
+            Transform.Rotation = Quaternion.FromAxisAngle(Vector3.UnitX, Mathf.Sin(Time.FixedTimePassed * def.BobSpeed) * 0.1f) * Quaternion.FromAxisAngle(Vector3.UnitY, Mathf.HalfPI);
 
             if (Mathf.Abs(xPos - PlayerController.Instance.Transform.Translation.X) < def.ServeRadius)
             {

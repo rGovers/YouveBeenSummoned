@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MaterialDef Name="PolygonCharacterMaterial_Base" Abstract="true" Parent="PolygonMaterial_Base">
+  <VertexShaderPath>Shaders/PolygonCharacter.fvert</VertexShaderPath>
+</MaterialDef>

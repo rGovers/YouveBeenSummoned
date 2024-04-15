@@ -10,11 +10,31 @@ namespace Summoned
 {
     public class YouveBeenSummonedAssemblyControl : AssemblyControl
     {
-        bool m_fullscreen;
-        Model m_sphereModel;
+        public static YouveBeenSummonedAssemblyControl Instance;
+
+        CellRenderPipeline m_pipeline;
+
+        bool               m_fullscreen;
+        Model              m_sphereModel;
+
+        bool               m_blend = false;
+
+        public bool Blend
+        {
+            get
+            {
+                return m_blend;
+            }
+            set
+            {
+                m_blend = value;
+            }
+        }
 
         public override void Init()
         {
+            Instance = this;
+
             m_fullscreen = true;
             if (!Application.IsHeadless)
             {
@@ -23,8 +43,11 @@ namespace Summoned
                 Application.SetFullscreen(monitors[0], true, monitors[0].Width, monitors[0].Height);
             }
 
-            RenderPipeline.SetPipeline(new CellRenderPipeline());
+            m_pipeline = new CellRenderPipeline();
+            RenderPipeline.SetPipeline(m_pipeline);
 
+            AudioPlayer.Init();
+            SoundMixers.Init();
             CameraController.Init();
             Minigames.Init();
 
@@ -34,7 +57,7 @@ namespace Summoned
             lightObject.Transform.Rotation = Quaternion.FromAxisAngle(Vector3.Normalized(new Vector3(1.0f, 0.0f, 0.3f)), 1.3f);
             AmbientLight ambLight = lightObject.AddComponent<AmbientLight>();
             ambLight.Color = Color.White;
-            ambLight.Intensity = 0.5f;
+            ambLight.Intensity = 0.75f;
             DirectionalLight dirLight = lightObject.AddComponent<DirectionalLight>();
             dirLight.Color = Color.White;
             dirLight.Intensity = 1.0f;
@@ -70,6 +93,17 @@ namespace Summoned
             }
 
             Minigames.Update();
+
+            AudioPlayer.Update();
+
+            if (m_blend)
+            {
+                m_pipeline.BlendFactor = Mathf.Min(m_pipeline.BlendFactor + Time.DeltaTime, 1.0f);
+            }
+            else
+            {
+                m_pipeline.BlendFactor = Mathf.Max(m_pipeline.BlendFactor - Time.DeltaTime, 0.0f);
+            }
         }
         public override void FixedUpdate()
         {
@@ -80,7 +114,9 @@ namespace Summoned
         {
             m_sphereModel.Dispose();
 
+            AudioPlayer.Destroy();
             SceneManager.Destroy();
+            SoundMixers.Destroy();
         }
     }
 }

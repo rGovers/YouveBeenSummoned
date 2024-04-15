@@ -1,4 +1,5 @@
 using IcarianEngine;
+using IcarianEngine.Audio;
 using IcarianEngine.Maths;
 using IcarianEngine.Rendering.UI;
 
@@ -21,12 +22,21 @@ namespace Summoned
 
             if (s_servedObject == null)
             {
+                YouveBeenSummonedAssemblyControl.Instance.Blend = true;
+
                 s_servedCanvas = Canvas.FromFile("UI/Served.ui");
                 s_servedCanvas.CapturesInput = true;
 
                 s_servedObject = GameObject.Instantiate();
+                s_servedObject.Transform.Translation = new Vector3(CameraController.Position, 0.0f, 10.0f);
                 CanvasRenderer renderer = s_servedObject.AddComponent<CanvasRenderer>();
                 renderer.Canvas = s_servedCanvas;
+
+                // AudioPlayer.PlayClip("Audio/Youve Been Summoned - Lose.ogg");
+                AudioSource source = s_servedObject.AddComponent<AudioSource>();
+                source.AudioClip = AssetLibrary.LoadAudioClip("Audio/Youve Been Summoned - Lose.ogg");
+                source.AudioMixer = SoundMixers.SoundMixer;
+                source.Play();
             }
         }
 
@@ -43,8 +53,16 @@ namespace Summoned
                 s_victoryCanvas.CapturesInput = true;
 
                 s_victoryObject = GameObject.Instantiate();
+                s_victoryObject.Transform.Translation = new Vector3(CameraController.Position, 0.0f, 10.0f);
+
                 CanvasRenderer renderer = s_victoryObject.AddComponent<CanvasRenderer>();
                 renderer.Canvas = s_victoryCanvas;
+
+                // AudioPlayer.PlayClip("Audio/Youve Been Summoned - Win.ogg");
+                AudioSource source = s_victoryObject.AddComponent<AudioSource>();
+                source.AudioClip = AssetLibrary.LoadAudioClip("Audio/Youve Been Summoned - Win.ogg");
+                source.AudioMixer = SoundMixers.SoundMixer;
+                source.Play();
             }
         }
 
@@ -62,6 +80,8 @@ namespace Summoned
         }
         static void OnRestart(Canvas a_canvas, UIElement a_element)
         {
+            // AudioPlayer.PlayClip("Audio/Youve Been Summoned - UI.ogg");
+
             // Dodgy hack because I still have not updated my UI to use deletion queues
             // Need to do work on UI down the line
             ThreadPool.PushJob(() =>
@@ -71,6 +91,8 @@ namespace Summoned
                 Reset();
 
                 PlayerController.Instance.Reset();
+                
+                YouveBeenSummonedAssemblyControl.Instance.Blend = false;
             });
         }
         static void OnQuit(Canvas a_canvas, UIElement a_element)

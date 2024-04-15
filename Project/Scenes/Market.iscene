@@ -4,12 +4,29 @@
     <GameObject>
       <Translation>
         <X>-3.362924</X>
+        <Y>0.986847</Y>
       </Translation>
+      <Rotation>
+        <Y>-0.7100012</Y>
+        <W>0.7042004</W>
+      </Rotation>
       <DefName>EnemyGameObject</DefName>
     </GameObject>
     <GameObject>
       <Translation>
         <X>10</X>
+      </Translation>
+      <DefName>MarketClickMinigameGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>31.90498</X>
+      </Translation>
+      <DefName>MarketClickMinigameGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>51.22094</X>
       </Translation>
       <DefName>MarketClickMinigameGameObject</DefName>
     </GameObject>
@@ -22,11 +39,131 @@
     </GameObject>
     <GameObject>
       <Translation>
-        <X>9.999873</X>
+        <X>10</X>
         <Y>1</Y>
         <Z>8</Z>
       </Translation>
       <DefName>PolygonRoadParkingGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>20</X>
+        <Y>1</Y>
+        <Z>8</Z>
+      </Translation>
+      <DefName>PolygonRoadParkingGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>30</X>
+        <Y>1</Y>
+        <Z>8</Z>
+      </Translation>
+      <DefName>PolygonRoadParkingGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>40</X>
+        <Y>1</Y>
+        <Z>8</Z>
+      </Translation>
+      <DefName>PolygonRoadParkingGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>50</X>
+        <Y>1</Y>
+        <Z>8</Z>
+      </Translation>
+      <DefName>PolygonRoadParkingGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>60</X>
+        <Y>1</Y>
+        <Z>8</Z>
+      </Translation>
+      <DefName>PolygonRoadParkingGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>20</X>
+        <Y>1</Y>
+        <Z>3</Z>
+      </Translation>
+      <DefName>PolygonSidewalkStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>25</X>
+        <Y>1</Y>
+        <Z>3</Z>
+      </Translation>
+      <DefName>PolygonSidewalkStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>30</X>
+        <Y>1</Y>
+        <Z>3</Z>
+      </Translation>
+      <DefName>PolygonSidewalkStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>35</X>
+        <Y>1</Y>
+        <Z>3</Z>
+      </Translation>
+      <DefName>PolygonSidewalkStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>40</X>
+        <Y>1</Y>
+        <Z>3</Z>
+      </Translation>
+      <DefName>PolygonSidewalkStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>45</X>
+        <Y>1</Y>
+        <Z>3</Z>
+      </Translation>
+      <DefName>PolygonSidewalkStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>50</X>
+        <Y>1</Y>
+        <Z>3</Z>
+      </Translation>
+      <DefName>PolygonSidewalkStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>55</X>
+        <Y>1</Y>
+        <Z>3</Z>
+      </Translation>
+      <DefName>PolygonSidewalkStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>60</X>
+        <Y>1</Y>
+        <Z>3</Z>
+      </Translation>
+      <DefName>PolygonSidewalkStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>65</X>
+        <Y>1</Y>
+        <Z>3</Z>
+      </Translation>
+      <DefName>PolygonSidewalkStraightGameObject</DefName>
     </GameObject>
     <GameObject>
       <Translation>
@@ -65,23 +202,29 @@
         <Z>3</Z>
       </Translation>
       <Rotation>
-        <Y>0.7071068</Y>
-        <W>0.7071068</W>
+        <Y>-0.7071788</Y>
+        <W>0.7070348</W>
       </Rotation>
       <Scale>
-        <X>0.999999</X>
+        <X>0.999997</X>
+        <Z>0.9999983</Z>
       </Scale>
       <DefName>PolygonSidewalkCornerEndGameObject</DefName>
     </GameObject>
     <GameObject>
       <Translation>
         <Y>1</Y>
-        <Z>7.95</Z>
+        <Z>8</Z>
       </Translation>
       <Rotation>
-        <Y>0.7071788</Y>
+        <Y>-0.7071788</Y>
         <W>0.7070348</W>
       </Rotation>
+      <Scale>
+        <X>0.9999998</X>
+        <Y>0.9999998</Y>
+        <Z>0.9999997</Z>
+      </Scale>
       <DefName>PolygonSidewalkCornerGameObject</DefName>
     </GameObject>
     <GameObject>
@@ -94,6 +237,14 @@
     </GameObject>
     <GameObject>
       <Translation>
+        <X>-15</X>
+        <Y>1</Y>
+        <Z>8</Z>
+      </Translation>
+      <DefName>PolygonSidewalkStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
         <X>15</X>
         <Y>1</Y>
         <Z>-2</Z>
@@ -118,6 +269,44 @@
     </GameObject>
     <GameObject>
       <Translation>
+        <X>5</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>5</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>-5</X>
         <Y>1</Y>
         <Z>-2</Z>
       </Translation>
@@ -127,7 +316,15 @@
       <Translation>
         <X>-5</X>
         <Y>1</Y>
-        <Z>-2</Z>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>-5</X>
+        <Y>1</Y>
+        <Z>-12</Z>
       </Translation>
       <DefName>PolygonGrassGameObject</DefName>
     </GameObject>
@@ -141,13 +338,26 @@
     </GameObject>
     <GameObject>
       <Translation>
+        <X>-15</X>
+        <Y>1</Y>
+        <Z>3</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
         <X>-5</X>
         <Y>1</Y>
       </Translation>
       <Rotation>
-        <Y>0.7071788</Y>
-        <W>0.7070348</W>
+        <Y>-0.7100012</Y>
+        <W>0.7042004</W>
       </Rotation>
+      <Scale>
+        <X>0.9999983</X>
+        <Y>1.000001</Y>
+        <Z>0.999999</Z>
+      </Scale>
       <DefName>PolygonFenceStraightGameObject</DefName>
     </GameObject>
     <GameObject>
@@ -157,8 +367,8 @@
         <Z>2.5</Z>
       </Translation>
       <Rotation>
-        <Y>0.7071788</Y>
-        <W>0.7070348</W>
+        <Y>-0.7100012</Y>
+        <W>0.7042004</W>
       </Rotation>
       <DefName>PolygonFenceStraightGameObject</DefName>
     </GameObject>
@@ -169,7 +379,7 @@
         <Z>-2.5</Z>
       </Translation>
       <Rotation>
-        <Y>0.7071788</Y>
+        <Y>-0.7071788</Y>
         <W>0.7070348</W>
       </Rotation>
       <DefName>PolygonFenceStraightGameObject</DefName>
@@ -181,7 +391,7 @@
         <Z>-5</Z>
       </Translation>
       <Rotation>
-        <Y>0.7071788</Y>
+        <Y>-0.7071788</Y>
         <W>0.7070348</W>
       </Rotation>
       <DefName>PolygonFenceStraightGameObject</DefName>
@@ -193,9 +403,296 @@
         <Z>-7.5</Z>
       </Translation>
       <Rotation>
-        <Y>0.7071788</Y>
+        <Y>-0.7071788</Y>
         <W>0.7070348</W>
       </Rotation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>-5</X>
+        <Y>1</Y>
+        <Z>-10</Z>
+      </Translation>
+      <Rotation>
+        <Y>-0.7071788</Y>
+        <W>0.7070348</W>
+      </Rotation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>-5</X>
+        <Y>1</Y>
+        <Z>-12.5</Z>
+      </Translation>
+      <Rotation>
+        <Y>-0.7071788</Y>
+        <W>0.7070348</W>
+      </Rotation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>-12.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>-10</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>-7.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>-5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>-2.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>2.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>7.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>10</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>12.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>15</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>17.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>20</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>22.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>25</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>27.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>30</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>32.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>35</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>37.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>40</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>42.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>45</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>47.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>50</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>52.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>55</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>57.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>60</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>62.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>65</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
+      <DefName>PolygonFenceStraightGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>67.5</X>
+        <Y>1</Y>
+        <Z>-15</Z>
+      </Translation>
       <DefName>PolygonFenceStraightGameObject</DefName>
     </GameObject>
     <GameObject>
@@ -208,11 +705,319 @@
     </GameObject>
     <GameObject>
       <Translation>
+        <X>31.9182</X>
+        <Y>1</Y>
+        <Z>-7.493935</Z>
+      </Translation>
+      <DefName>PolygonBidShop01GameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>50.94691</X>
+        <Y>1</Y>
+        <Z>-7.493935</Z>
+      </Translation>
+      <DefName>PolygonBidShop01GameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
         <X>11.84654</X>
         <Y>-2.639988</Y>
         <Z>-2.72441</Z>
       </Translation>
       <DefName>PolygonSign01GameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>32.36405</X>
+        <Y>-2.639988</Y>
+        <Z>-2.72441</Z>
+      </Translation>
+      <DefName>PolygonSign01GameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>51.5593</X>
+        <Y>-2.639988</Y>
+        <Z>-2.72441</Z>
+      </Translation>
+      <DefName>PolygonSign01GameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>-16.39024</X>
+        <Y>1.9</Y>
+        <Z>-4.374857</Z>
+      </Translation>
+      <Rotation>
+        <Y>0.7100012</Y>
+        <W>0.7042004</W>
+      </Rotation>
+      <DefName>PolygonHousePreset08GameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>20</X>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>25</X>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>30</X>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>35</X>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>40</X>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>45</X>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>50</X>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>55</X>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>60</X>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>65</X>
+        <Y>1</Y>
+        <Z>-2</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>15</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>20</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>25</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>30</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>35</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>40</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>45</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>50</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>55</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>60</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>65</X>
+        <Y>1</Y>
+        <Z>-7</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>15</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>20</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>25</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>30</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>35</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>40</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>45</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>50</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>55</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>60</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>65</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
+    </GameObject>
+    <GameObject>
+      <Translation>
+        <X>10</X>
+        <Y>1</Y>
+        <Z>-12</Z>
+      </Translation>
+      <DefName>PolygonGrassGameObject</DefName>
     </GameObject>
   </Objects>
   <Defs>
@@ -337,6 +1142,20 @@
       </Scale>
       <Components>
         <lv>PolygonSign01MeshRenderer</lv>
+      </Components>
+    </GameObjectDef>
+    <MeshRendererDef Name="PolygonHousePreset08MeshRenderer">
+      <ModelPath>Models/Polygon/SM_Bld_House_Preset_08.obj</ModelPath>
+      <MaterialDef>PolygonMaterial_01_A</MaterialDef>
+    </MeshRendererDef>
+    <GameObjectDef Name="PolygonHousePreset08GameObject">
+      <Scale>
+        <X>0.01</X>
+        <Y>0.01</Y>
+        <Z>0.01</Z>
+      </Scale>
+      <Components>
+        <lv>PolygonHousePreset08MeshRenderer</lv>
       </Components>
     </GameObjectDef>
   </Defs>

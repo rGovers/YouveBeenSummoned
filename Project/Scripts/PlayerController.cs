@@ -76,7 +76,7 @@ namespace Summoned
 
             float xPos = Transform.Translation.X + mov * def.MoveSpeed * Time.DeltaTime;
 
-            CameraController.SetPosition(xPos);
+            CameraController.Position = xPos;
 
             Transform.Translation = new Vector3(xPos, 0.0f, 0.0f);
         }

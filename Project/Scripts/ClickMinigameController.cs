@@ -24,7 +24,7 @@ namespace Summoned
         {
             ClickMinigameControllerDef def = ClickMinigameControllerDef;
 
-            a_element.Size = new Vector2(120.0f);
+            a_element.Size = new Vector2(700.0f);
 
             m_energy += def.ClickEnergy;
         }
@@ -39,12 +39,12 @@ namespace Summoned
         protected override void InitGame()
         {
             m_imageElement = new ImageUIElement();
-            m_imageElement.Position = new Vector2(Random.Range(600, 800), Random.Range(300, 400));
-            m_imageElement.Size = new Vector2(100.0f);
+            m_imageElement.Position = new Vector2(Random.Range(400, 600), Random.Range(200, 300));
+            m_imageElement.Size = new Vector2(300.0f);
             m_imageElement.Sampler = AssetLibrary.GetSampler(new TextureInput()
             {
                 Slot = 0,
-                Path = "Textures/UI/ClickTemp.png",
+                Path = "Textures/UI/BUTTON_FINGER-01.png",
                 AddressMode = TextureAddress.Repeat,
                 FilterMode = TextureFilter.Linear
             });
@@ -59,7 +59,7 @@ namespace Summoned
 
             if (m_imageElement != null)
             {
-                m_imageElement.Size = Vector2.Lerp(m_imageElement.Size, new Vector2(100.0f), Time.DeltaTime);
+                m_imageElement.Size = Vector2.Lerp(m_imageElement.Size, new Vector2(600.0f), Time.DeltaTime);
             }
 
             if (m_energy >= def.RequiredClickEnergy)

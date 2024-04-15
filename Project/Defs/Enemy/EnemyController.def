@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Summoned.Definitions.EnemyControllerDef Name="EnemyController" />
+<Summoned.Definitions.EnemyControllerDef Name="EnemyController">
+  <ServeRadius>1</ServeRadius>
+</Summoned.Definitions.EnemyControllerDef>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MaterialDef Name="PolygonCharacterMaterial_03_A" Parent="PolygonCharacterMaterial_Base">
+  <CullingMode>Back</CullingMode>
+  <TextureInputs>
+    <lv>
+      <Slot>0</Slot>
+      <Path>Textures/Polygon/PolygonTown_Texture_03_A.png</Path>
+      <AddressMode>Repeat</AddressMode>
+      <FilterMode>Linear</FilterMode>
+    </lv>
+  </TextureInputs>
+</MaterialDef>

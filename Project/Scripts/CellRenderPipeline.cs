@@ -13,6 +13,7 @@ namespace Summoned
 
         MultiRenderTexture m_drawRenderTexture;
         RenderTexture      m_lightingRenderTexture;
+        RenderTexture      m_finalRenderTexture;
 
         TextureSampler     m_colorSampler;
         TextureSampler     m_normalSampler;
@@ -20,13 +21,31 @@ namespace Summoned
         TextureSampler     m_depthSampler;
 
         TextureSampler     m_lightColorSampler;
+        TextureSampler     m_finalColorSampler;
+
+        TextureSampler     m_blendTextureSampler;
 
         Material           m_ambientLightMaterial;
         Material           m_directionalLightMaterial;
 
         Material           m_outlineMaterial;
+        Material           m_blendMaterial;
 
         VertexShader       m_quadVert;
+
+        float              m_blend;
+
+        public float BlendFactor
+        {
+            get
+            {
+                return m_blend;
+            }
+            set
+            {
+                m_blend = value;
+            }
+        }
 
         void SetTexture(Material a_material)
         {
@@ -38,11 +57,13 @@ namespace Summoned
 
         public CellRenderPipeline()
         {
+            m_blend = 0.0f;
             m_width = 1280;
             m_height = 720;
 
             m_drawRenderTexture = new MultiRenderTexture(3, m_width, m_height, true, true);
             m_lightingRenderTexture = new RenderTexture(m_width, m_height, false, true);
+            m_finalRenderTexture = new RenderTexture(m_width, m_height, false, true);
 
             m_colorSampler = TextureSampler.GenerateRenderTextureSampler(m_drawRenderTexture, 0);
             m_normalSampler = TextureSampler.GenerateRenderTextureSampler(m_drawRenderTexture, 1);
@@ -50,6 +71,7 @@ namespace Summoned
             m_depthSampler = TextureSampler.GenerateRenderTextureDepthSampler(m_drawRenderTexture);
 
             m_lightColorSampler = TextureSampler.GenerateRenderTextureSampler(m_lightingRenderTexture);
+            m_finalColorSampler = TextureSampler.GenerateRenderTextureSampler(m_finalRenderTexture);
 
             m_quadVert = VertexShader.LoadVertexShader("[INTERNAL]Quad");
 
@@ -192,6 +214,47 @@ namespace Summoned
 
             m_outlineMaterial.SetTexture(0, m_lightColorSampler);
             m_outlineMaterial.SetTexture(1, m_depthSampler);
+
+            PixelShader blendPix = AssetLibrary.LoadPixelShader("Shaders/RenderPipeline/Blend.fpix");
+
+            MaterialBuilder blendBuilder = new MaterialBuilder()
+            {
+                VertexShader = m_quadVert,
+                PixelShader = blendPix,
+                PrimitiveMode = PrimitiveMode.TriangleStrip,
+                EnableColorBlending = false,
+                ShaderInputs = new ShaderBufferInput[]
+                {
+                    new ShaderBufferInput()
+                    {
+                        Slot = 0,
+                        BufferType = ShaderBufferType.Texture,
+                        ShaderSlot = ShaderSlot.Pixel,
+                        Set = 0
+                    },
+                    new ShaderBufferInput()
+                    {
+                        Slot = 1,
+                        BufferType = ShaderBufferType.Texture,
+                        ShaderSlot = ShaderSlot.Pixel,
+                        Set = 0
+                    },
+                    new ShaderBufferInput()
+                    {
+                        Slot = 2,
+                        BufferType = ShaderBufferType.UserUBO,
+                        ShaderSlot = ShaderSlot.Pixel,
+                        Set = 1
+                    }
+                },
+                UBOBuffer = m_blend
+            };
+            
+            m_blendMaterial = Material.CreateMaterial(blendBuilder);
+
+            m_blendTextureSampler = TextureSampler.GenerateTextureSampler(AssetLibrary.LoadTexture("Textures/RenderPipeline/Lose_Screen.png"));
+
+            m_blendMaterial.SetTexture(1, m_blendTextureSampler);
         }
 
         public override void Resize(uint a_width, uint a_height)
@@ -206,12 +269,15 @@ namespace Summoned
 
             m_drawRenderTexture.Resize(m_width, m_height);
             m_lightingRenderTexture.Resize(m_width, m_height);
+            m_finalRenderTexture.Resize(m_width, m_height);
 
             SetTexture(m_ambientLightMaterial);
             SetTexture(m_directionalLightMaterial);
 
             m_outlineMaterial.SetTexture(0, m_lightColorSampler);
             m_outlineMaterial.SetTexture(1, m_depthSampler);
+
+            m_blendMaterial.SetTexture(0, m_finalColorSampler);
         }
 
         public override void ShadowSetup(LightType a_lightType, Camera a_camera)
@@ -278,23 +344,41 @@ namespace Summoned
 
         public override void PostProcess(Camera a_camera)
         {
-            RenderCommand.BindRenderTexture(a_camera.RenderTexture);
+            if (m_blend > 0)
+            {
+                m_blendMaterial.SetUserUniform(m_blend);
 
-            RenderCommand.BindMaterial(m_outlineMaterial);
-            RenderCommand.DrawMaterial();
+                RenderCommand.BindRenderTexture(m_finalRenderTexture);
+                RenderCommand.BindMaterial(m_outlineMaterial);
+                RenderCommand.DrawMaterial();
+
+                RenderCommand.BindRenderTexture(a_camera.RenderTexture);
+                RenderCommand.BindMaterial(m_blendMaterial);
+                RenderCommand.DrawMaterial();
+            }
+            else
+            {
+                RenderCommand.BindRenderTexture(a_camera.RenderTexture);
+                RenderCommand.BindMaterial(m_outlineMaterial);
+                RenderCommand.DrawMaterial();
+            }
         }
 
         public void Dispose()
         {
             m_drawRenderTexture.Dispose();
             m_lightingRenderTexture.Dispose();
-            
+            m_finalRenderTexture.Dispose();
+
             m_colorSampler.Dispose();
             m_normalSampler.Dispose();
             m_specularSampler.Dispose();
             m_depthSampler.Dispose();
 
             m_lightColorSampler.Dispose();
+            m_finalColorSampler.Dispose();
+
+            m_blendTextureSampler.Dispose();
 
             m_quadVert.Dispose();
 
@@ -302,6 +386,7 @@ namespace Summoned
             m_directionalLightMaterial.Dispose();
 
             m_outlineMaterial.Dispose();
+            m_blendMaterial.Dispose();
         }
     }
 }
